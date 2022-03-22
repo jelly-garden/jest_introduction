@@ -13,13 +13,13 @@ test('should generate a valid text output', () => {
 
 test('should create an element with text and correct class', async () => {
   const browser = await puppeteer.launch({
-    headless: true,
-    // slowMo: 80,
-    // args: ['--window-size=1920,1080']
+    headless: false,
+    slowMo: 80,
+    args: ['--window-size=1920,1080']
   });
   const page = await browser.newPage();
   await page.goto(
-    'file:///Users/mschwarzmueller/development/teaching/youtube/js-testing/index.html'
+    'file:///D:/Javascript%20Test/jest_introduction/index.html'
   );
   await page.click('input#name');
   await page.type('input#name', 'Anna');
